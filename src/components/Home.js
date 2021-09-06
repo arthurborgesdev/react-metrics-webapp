@@ -1,30 +1,22 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   Switch,
   Route,
   Link,
   useRouteMatch,
 } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import getCovid from '../redux/slices/covidSlice';
+import { useSelector } from 'react-redux';
 import Header from './Header';
 import Details from './Details';
 
 const Home = () => {
-  const dispatch = useDispatch();
+  const { url } = useRouteMatch();
+  // const match = useRouteMatch();
 
-  const { path } = useRouteMatch();
-  const countries = useSelector((state) => state.covidReducer.covid);
-
-  useEffect(() => {
-    if (!countries.length) {
-      dispatch(getCovid());
-    }
-  }, []);
-
+  const countries = useSelector((state) => state.covidReducer.covidCountries);
   const countriesList = countries.map((country) => (
     <div key={country.name[0]} className="country-card">
-      <Link href="/#">
+      <Link href="/#" to={`${url}${country.name[0].toLowerCase()}`}>
         <div key={country.name[0]} id={country.name[0]} className="country-link">
           <p>{country.name[0]}</p>
           <p>{country.confirmed}</p>
@@ -32,8 +24,7 @@ const Home = () => {
         </div>
       </Link>
       <Switch>
-        <Route path={`${path}/${country.name[0].toLowerCase()}`}>
-          <Header title="Contry details" backButton="Countries" />
+        <Route exact path={`${url}${country.name[0].toLowerCase()}`} component={Details}>
           <Details />
         </Route>
       </Switch>
@@ -42,6 +33,7 @@ const Home = () => {
 
   return (
     <>
+      <Header title="Countries" backButton="App" />
       { countriesList }
     </>
   );
