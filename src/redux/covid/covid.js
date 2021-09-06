@@ -5,7 +5,9 @@ const today = dayjs().format('YYYY-MM-DD');
 
 // Initial state
 
-const initialState = {};
+const initialState = {
+  covid: [],
+};
 
 // Reducer
 
@@ -23,7 +25,7 @@ const reducer = (state = initialState, action) => {
           deaths: key[1].today_deaths,
         });
       });
-      return { ...state, pending: false, covidCountries };
+      return { ...state, pending: false, covid: covidCountries };
     }
     case GET_COVID_ERR:
       return { ...state, pending: false, error: action.error };

@@ -11,18 +11,14 @@ const App = () => {
 
   useEffect(async () => {
     await dispatch(getCovid());
-  });
+  }, []);
 
   return (
     <div>
       <Router>
         <Switch>
           <Route exact path="/">
-            <Header title="Countries" backButton="App"/>
-            <Home />
-          </Route>
-          <Route exact path="/">
-            <Header title="Contry details" backButton="Countries"/>
+            <Header title="Countries" backButton="App" />
             <Home />
           </Route>
         </Switch>
