@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import getCovid from './redux/slices/covidSlice';
+import Home from './components/Home';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -12,13 +13,15 @@ const App = () => {
   });
 
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <h1>Hello, React</h1>
-        </Route>
-      </Switch>
-    </Router>
+    <div>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
   );
 };
 
