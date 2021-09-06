@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import getCovid from './redux/slices/covidSlice';
 import Home from './components/Home';
+import Header from './components/Header';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -17,6 +18,11 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path="/">
+            <Header title="Countries" backButton="App"/>
+            <Home />
+          </Route>
+          <Route exact path="/">
+            <Header title="Contry details" backButton="Countries"/>
             <Home />
           </Route>
         </Switch>
