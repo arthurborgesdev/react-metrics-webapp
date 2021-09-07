@@ -10,7 +10,6 @@ const detailsURL = `https://api.covid19tracking.narrativa.com/api/${today}/count
 
 const getDetails = (country) => async (dispatch) => {
   dispatch({ type: GET_COVID_DETAILS });
-  console.log(`${detailsURL}${country}`);
   const response = await fetch(`${detailsURL}${country}`);
   const details = await response.json();
   return dispatch({ type: GET_COVID_DETAILS_SUCCESS, details });

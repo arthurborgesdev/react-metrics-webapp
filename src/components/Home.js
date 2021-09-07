@@ -8,10 +8,8 @@ import Header from './Header';
 
 const Home = () => {
   const { url } = useRouteMatch();
-  // const match = useRouteMatch();
 
   const countries = useSelector((state) => state.covidReducer.covidCountries);
-  // console.log(countries);
   const countriesList = countries.map((country) => (
     <div key={country.name[0]} className="country-card">
       <Link href="/#" to={`${url}${country.name[0].toLowerCase()}`}>
@@ -26,7 +24,7 @@ const Home = () => {
 
   return (
     <>
-      <Header title="Countries" backButton="App" />
+      <Header backButton="App" title="Greatest COVID numbers - Countries" />
       { countriesList }
     </>
   );

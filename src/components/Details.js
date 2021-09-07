@@ -18,25 +18,40 @@ const queryURL = (url, countryData) => {
 
 const Details = ({ name }) => {
   const { url } = useRouteMatch();
-
   const dispatch = useDispatch();
 
-  useEffect(async () => {
-    await dispatch(getDetails(url));
-  }, []);
-
   const countryData = useSelector((state) => state.detailsReducer.covidDetails);
-
+  console.log('countryData', countryData);
   const countryInfo = queryURL(url, countryData);
 
-  console.log(countryInfo);
+  useEffect(async () => {
+    if (!countryData.length) {
+      console.log('entrei no use effect', name);
+      await dispatch(getDetails(url));
+    }
+  }, []);
+
   return (
     <>
       <Header title="Contry details" backButton="Countries" />
       <h2>Details</h2>
-      <p>{name}</p>
-      <p>Deaths today: </p>
-      <p>{}</p>
+      <p>{countryInfo?.name}</p>
+      <p>
+        Deaths until today:
+        {countryInfo?.today_deaths}
+      </p>
+      <p>
+        Deaths today:
+        {countryInfo?.today_new_deaths}
+      </p>
+      <p>
+        Confirmed cases until today:
+        {countryInfo?.today_confirmed}
+      </p>
+      <p>
+        Confirmed cases today:
+        {countryInfo?.today_new_confirmed}
+      </p>
     </>
   );
 };
