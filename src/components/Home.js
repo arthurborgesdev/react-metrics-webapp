@@ -1,19 +1,17 @@
 import React from 'react';
 import {
-  Switch,
-  Route,
   Link,
   useRouteMatch,
 } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Header from './Header';
-import Details from './Details';
 
 const Home = () => {
   const { url } = useRouteMatch();
   // const match = useRouteMatch();
 
   const countries = useSelector((state) => state.covidReducer.covidCountries);
+  console.log(countries);
   const countriesList = countries.map((country) => (
     <div key={country.name[0]} className="country-card">
       <Link href="/#" to={`${url}${country.name[0].toLowerCase()}`}>
@@ -23,11 +21,6 @@ const Home = () => {
           <p>{country.deaths}</p>
         </div>
       </Link>
-      <Switch>
-        <Route exact path={`${url}${country.name[0].toLowerCase()}`} component={Details}>
-          <Details />
-        </Route>
-      </Switch>
     </div>
   ));
 
