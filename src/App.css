@@ -1,4 +1,50 @@
-h1 {
-  background-color: #000;
+body {
+  background-color: #fff;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* ----------- Header ------------ */
+.header-container {
+  background-color: #ac3763;
+}
+
+.header-contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-contents p {
   color: #fff;
+  font-weight: bold;
+}
+
+.header-icons {
+  display: flex;
+}
+
+.header-icon {
+  padding: 10px;
+}
+
+/* ------- Countries --------- */
+.countries-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.country-card:nth-child(odd) {
+  background-color: #ac3763;
+  width: 50%;
+}
+
+.country-card:nth-child(even) {
+  background-color: #fa498d;
+  width: 50%;
+}
+
+.country-link p {
+  margin: 0;
 }

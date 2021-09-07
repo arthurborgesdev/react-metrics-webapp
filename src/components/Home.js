@@ -24,8 +24,10 @@ const Home = () => {
 
   return (
     <>
-      <Header backButton="App" title="Greatest COVID numbers - Countries" />
-      { countriesList }
+      <Header backButton="< App" title="Higher COVID data" />
+      <div className="countries-container">
+        { countriesList }
+      </div>
     </>
   );
 };
