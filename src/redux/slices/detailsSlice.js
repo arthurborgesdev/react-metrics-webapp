@@ -6,12 +6,13 @@ const GET_COVID_DETAILS_ERR = 'covid_details/detailsslice/GET_COVID_DETAILS_ERR'
 
 const today = dayjs().format('YYYY-MM-DD');
 
-const detailsURL = `https://api.covid19tracking.narrativa.com/api/${today}/country/`;
+const detailsURL = `https://api.covid19tracking.narrativa.com/api/${today}/country`;
 
 const getDetails = (country) => async (dispatch) => {
   dispatch({ type: GET_COVID_DETAILS });
-  const response = await fetch(`detailsURL${country}`);
-  const covid = await response.json();
+  console.log(`${detailsURL}${country}`);
+  const response = await fetch(`${detailsURL}${country}`);
+  const details = await response.json();
   return dispatch({ type: GET_COVID_DETAILS_SUCCESS, details });
 };
 

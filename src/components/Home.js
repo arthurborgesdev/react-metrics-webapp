@@ -11,7 +11,7 @@ const Home = () => {
   // const match = useRouteMatch();
 
   const countries = useSelector((state) => state.covidReducer.covidCountries);
-  console.log(countries);
+  // console.log(countries);
   const countriesList = countries.map((country) => (
     <div key={country.name[0]} className="country-card">
       <Link href="/#" to={`${url}${country.name[0].toLowerCase()}`}>
