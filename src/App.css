@@ -30,6 +30,14 @@ body {
   padding: 10px;
 }
 
+button {
+  background-color: #ac3763;
+  border: 1px solid #ac3763;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 /* ------- Countries --------- */
 .countries-container {
   background-color: #ac3763;

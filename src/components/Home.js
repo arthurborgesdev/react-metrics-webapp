@@ -37,7 +37,7 @@ const Home = () => {
 
   return (
     <>
-      <Header backButton="< App" title="Higher COVID data" />
+      <Header backButtonTitle="< App" title="Higher COVID data" />
       <div className="countries-container">
         { countriesList }
       </div>

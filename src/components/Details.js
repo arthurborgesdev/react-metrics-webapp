@@ -22,7 +22,7 @@ const Details = ({ name }) => {
 
   return (
     <>
-      <Header title="Contry details" backButton="Countries" />
+      <Header title="Contry details" backButtonTitle="< Countries" />
       <h2>Details</h2>
       <p>{countryInfo?.name}</p>
       <p>
