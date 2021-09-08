@@ -6,6 +6,15 @@
 
 ![screenshot](./screenshot.png)
 
+## Live version
+
+You can access the live version [here](https://compassionate-mcnulty-b5a7df.netlify.app/).
+
+(Resize the page or inspect and select "mobile" to see the responsive version)
+
+## Video presentation
+
+You can access the video presentation of the project [here](https://www.loom.com/share/c6a43bddc4ef4909a79ce1dd5eb0ff15).
 
 ## Built With
 
