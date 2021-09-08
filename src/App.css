@@ -76,7 +76,7 @@ a.country-card {
 }
 
 /* --------------- Country Details -------- */
-.country-details {
+.country-container {
   background-color: #fa498d;
   min-height: 100vh;
 }
@@ -92,5 +92,10 @@ a.country-card {
   text-align: center;
   color: #fff;
   font-weight: 700;
-  margin: 15px 10px;
+  padding: 15px 0;
+  margin: 0;
+}
+
+.country-details p:nth-child(2n) {
+  background-color: #ac3763;
 }
