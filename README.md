@@ -39,6 +39,8 @@ You can access the video presentation of the project [here](https://www.loom.com
 
 ## Usage
 
+(If you are a Microverse's code reviewer, change to the correct branch before: `git checkout capstone-project`)
+
 - Run `npm install` on a Terminal to install the modules
 - Run `yarn start` on a Terminal to start the server 
 - Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
