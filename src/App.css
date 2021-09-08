@@ -31,20 +31,29 @@ body {
 
 /* ------- Countries --------- */
 .countries-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.country-card:nth-child(odd) {
   background-color: #ac3763;
-  width: 50%;
+  display: grid;
+  grid-template-rows: repeat(98, 10rem);
+  grid-template-columns: 50% 50%;
+  grid-auto-flow: row;
 }
 
-.country-card:nth-child(even) {
+.country-card:nth-child(4n) {
   background-color: #fa498d;
-  width: 50%;
 }
 
+.country-card:nth-child(4n - 3) {
+  background-color: #fa498d;
+}
+
+.country-card:nth-child(8n - 7) {
+  background-color: #fa498d;
+}
+/*
+.country-card:nth-child(3n - 1) {
+  background-color: #ac3763;
+}
+*/
 .country-link p {
   margin: 0;
 }
