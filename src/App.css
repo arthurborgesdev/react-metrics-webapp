@@ -47,6 +47,13 @@ button {
 }
 
 /* ------- Countries --------- */
+.deaths-filter {
+  background-color: #fa498d;
+  border-bottom: 2px solid #fff;
+  padding: 3px 0;
+  color: #fff;
+}
+
 .countries-container {
   background-color: #ac3763;
   display: grid;

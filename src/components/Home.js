@@ -44,7 +44,7 @@ const Home = () => {
   return (
     <>
       <Header backButtonTitle="< App" title="COVID data by Countries" />
-      <div>
+      <div className="deaths-filter">
         {' Filter by minimum number of Deaths: '}
         <input
           type="number"
