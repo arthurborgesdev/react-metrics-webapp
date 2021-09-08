@@ -19,9 +19,17 @@ const Home = () => {
     >
       <div>
         <div key={country.name[0]} id={country.name[0]} className="country-link">
-          <p>{country.name[0]}</p>
-          <p>{country.confirmed}</p>
-          <p>{country.deaths}</p>
+          <p className="country-name">{country.name[0]}</p>
+          <p className="cases-confirmed">
+            TOTAL CASES CONFIRMED:
+            {' '}
+            {country.confirmed}
+          </p>
+          <p className="deaths">
+            TOTAL DEATHS:
+            {' '}
+            {country.deaths}
+          </p>
         </div>
       </div>
     </Link>

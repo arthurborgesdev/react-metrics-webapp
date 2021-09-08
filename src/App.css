@@ -51,6 +51,17 @@ body {
   background-color: #fa498d;
 }
 
+a.country-card {
+  text-decoration: none;
+}
+
+.country-name {
+  font-size: 24px;
+  text-decoration: underline;
+}
+
 .country-link p {
-  margin: 0;
+  color: #fff;
+  font-weight: 700;
+  margin: 15px 10px;
 }
