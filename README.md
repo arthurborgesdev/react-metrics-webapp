@@ -26,6 +26,7 @@
 
 - Get the link of the repository: `git@github.com:arthurborgesdev/react-metrics-webapp.git`
 - Clone it as `git@github.com:arthurborgesdev/react-metrics-webapp.git` on a Terminal
+- Change directory to it by `cd react-metrics-webapp`
 
 ## Usage
 
