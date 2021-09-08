@@ -19,7 +19,7 @@ const Home = () => {
     >
       <div>
         <div key={country.name[0]} id={country.name[0]} className="country-link">
-          <p className="country-name">{country.name[0]}</p>
+          <h2 className="country-name">{country.name[0]}</h2>
           <p className="cases-confirmed">
             TOTAL CASES CONFIRMED:
             {' '}
