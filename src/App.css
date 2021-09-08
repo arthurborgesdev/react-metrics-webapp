@@ -9,6 +9,7 @@ body {
 /* ----------- Header ------------ */
 .header-container {
   background-color: #ac3763;
+  border-bottom: 2px solid #fff;
 }
 
 .header-contents {
