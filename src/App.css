@@ -49,11 +49,7 @@ body {
 .country-card:nth-child(8n - 7) {
   background-color: #fa498d;
 }
-/*
-.country-card:nth-child(3n - 1) {
-  background-color: #ac3763;
-}
-*/
+
 .country-link p {
   margin: 0;
 }
