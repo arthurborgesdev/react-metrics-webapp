@@ -5,7 +5,7 @@ import {
   GET_COVID_DETAILS_ERR,
 } from '../slices/detailsSlice';
 
-const today = dayjs().format('YYYY-MM-DD');
+const today = dayjs().subtract(2, 'day').format('YYYY-MM-DD');
 
 // Initial state
 
