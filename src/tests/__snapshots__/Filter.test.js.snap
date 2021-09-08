@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="deaths-filter"
+>
+   Filter by minimum number of Deaths: 
+  <input
+    id="deaths-range"
+    max="9999999999"
+    min="0"
+    name="death-range"
+    type="number"
+  />
+</div>
+`;

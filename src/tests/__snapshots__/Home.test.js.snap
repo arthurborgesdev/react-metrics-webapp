@@ -60,6 +60,18 @@ Array [
     </div>
   </div>,
   <div
+    className="deaths-filter"
+  >
+     Filter by minimum number of Deaths: 
+    <input
+      id="deaths-range"
+      max="9999999999"
+      min="0"
+      name="death-range"
+      type="number"
+    />
+  </div>,
+  <div
     className="countries-container"
   />,
 ]

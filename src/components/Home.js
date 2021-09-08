@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Header from './Header';
+import Filter from './Filter';
 
 const Home = () => {
   const { url } = useRouteMatch();
@@ -44,18 +45,7 @@ const Home = () => {
   return (
     <>
       <Header backButtonTitle="< App" title="COVID data by Countries" />
-      <div className="deaths-filter">
-        {' Filter by minimum number of Deaths: '}
-        <input
-          type="number"
-          id="deaths-range"
-          name="death-range"
-          min="0"
-          max="9999999999"
-          value={minDeaths}
-          onChange={handleMinNumberOfDeaths}
-        />
-      </div>
+      <Filter value={minDeaths} onChange={handleMinNumberOfDeaths} />
       <div className="countries-container">
         { countriesList }
       </div>
