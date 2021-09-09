@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+html,
+body {
+  background-color: #fff;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ----------- Header ------------ */
+.header-container {
+  background-color: #ac3763;
+  border-bottom: 2px solid #fff;
+}
+
+.header-contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-contents p {
+  color: #fff;
+  font-weight: bold;
+}
+
+.header-icons {
+  display: flex;
+}
+
+.header-icon {
+  padding: 10px;
+}
+
+button {
+  background-color: #ac3763;
+  border: 1px solid #ac3763;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ------- Countries --------- */
+.deaths-filter {
+  background-color: #fa498d;
+  border-bottom: 2px solid #fff;
+  padding: 3px 0;
+  color: #fff;
+}
+
+.countries-container {
+  background-color: #ac3763;
+  display: grid;
+  grid-template-rows: repeat(98, 10rem);
+  grid-template-columns: 50% 50%;
+  grid-auto-flow: row;
+}
+
+.country-card:nth-child(4n) {
+  background-color: #fa498d;
+}
+
+.country-card:nth-child(4n - 3) {
+  background-color: #fa498d;
+}
+
+.country-card:nth-child(8n - 7) {
+  background-color: #fa498d;
+}
+
+a.country-card {
+  text-decoration: none;
+}
+
+.country-link h2 {
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: underline;
+  color: #fff;
+  margin: 5px 10px;
+}
+
+.country-link p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 15px 10px;
+}
+
+/* --------------- Country Details -------- */
+.country-container {
+  background-color: #fa498d;
+  min-height: 100vh;
+}
+
+.country-details h2 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 24px;
+  color: #fff;
+}
+
+.country-details p {
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  padding: 15px 0;
+  margin: 0;
+}
+
+.country-details p:nth-child(2n) {
+  background-color: #ac3763;
+}
